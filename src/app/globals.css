@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: custom gradient class */
+.bg-gradient-primary {
+  background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
+}
+
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Custom gradient backgrounds */
+.gradient-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+/* Loading animation */
+.loading-dots::after {
+  content: '...';
+  animation: dots 1s steps(5, end) infinite;
+}
+
+@keyframes dots {
+  0%, 20% { content: ''; }
+  40% { content: '.'; }
+  60% { content: '..'; }
+  80%, 100% { content: '...'; }
+}
+
+:root {
+  --primary: #4F46E5; /* Indigo */
+  --accent: #F43F5E;  /* Pink/Red */
+  --background: #F9FAFB; /* Light Gray */
+  --text: #111827;     /* Dark Gray */
+}
+
+/* Tailwind base overrides if needed */
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
